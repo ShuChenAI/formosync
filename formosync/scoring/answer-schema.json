@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "意圖": {
+      "type": "string"
+    },
+    "對象": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "數量": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "單價": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "約略": {
+      "type": "boolean"
+    },
+    "日期": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "時間起": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "時間迄": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "時間是否精確": {
+      "type": "boolean"
+    },
+    "同意狀態": {
+      "type": "string"
+    },
+    "下一步": {
+      "type": "string",
+      "enum": [
+        "查詢",
+        "預覽",
+        "執行",
+        "釐清",
+        "等待",
+        "回覆"
+      ]
+    },
+    "缺少資訊": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "本步寫入": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "意圖",
+    "對象",
+    "數量",
+    "單價",
+    "約略",
+    "日期",
+    "時間起",
+    "時間迄",
+    "時間是否精確",
+    "同意狀態",
+    "下一步",
+    "缺少資訊",
+    "本步寫入"
+  ]
+}

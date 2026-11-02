@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite FormoSync E4B and the applicable upstream model and dataset sources."
+title: "FormoSync E4B: Taiwan Mandarin and schema-grounded tool use"
+authors:
+  - name: ShuChenAI
+version: 0.1.0
+date-released: 2026-11-02
+repository-code: "https://github.com/ShuChenAI/formosync"
+url: "https://github.com/ShuChenAI/formosync"

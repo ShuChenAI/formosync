@@ -1,0 +1,269 @@
+{
+  "selection": {
+    "weights_sha256": "fecf928856466c605aed86cc55d23e9fdb8da7f8c7fb06a381c140c2da53bd05",
+    "step": 768,
+    "development_accepted": false,
+    "development_assessment": {
+      "accepted": false,
+      "gates": {
+        "knowledge_nonregressing": false,
+        "ct_at_least_r2_and_base": true,
+        "language_improves": true,
+        "schema_nonregressing": true,
+        "no_call_nonregressing": false,
+        "zero_unwanted_commits": true
+      },
+      "knowledge_delta": -0.005970149253731405,
+      "ct_delta": 0.1741071428571429,
+      "language_delta": 0.44285714285714295,
+      "rank": [
+        0,
+        -0.06382978723404253,
+        -0.005970149253731405,
+        0.6109941364605544
+      ]
+    },
+    "research_candidate_only": true,
+    "initialization": "fresh base LoRA"
+  },
+  "results": {
+    "base": {
+      "frozen": {
+        "by_category": {
+          "custom_tables": {
+            "n": 40,
+            "passed": 25,
+            "rate": 0.625,
+            "schema_valid": 1.0,
+            "truncated": 7
+          },
+          "legacy_generic": {
+            "n": 30,
+            "passed": 25,
+            "rate": 0.8333333333333334,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_teamsync": {
+            "n": 114,
+            "passed": 94,
+            "rate": 0.8245614035087719,
+            "schema_valid": 1.0,
+            "truncated": 3
+          },
+          "zhtw_comprehension": {
+            "n": 40,
+            "passed": 28,
+            "rate": 0.7,
+            "schema_valid": 0.975,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "custom_tables": 0.625,
+          "legacy_generic": 0.8333333333333334,
+          "legacy_teamsync": 0.8245614035087719,
+          "zhtw_comprehension": 0.7
+        },
+        "features": {
+          "ct": null,
+          "language": 0.7,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 224,
+        "seconds": 656.8125410079956
+      },
+      "pragmatics": {
+        "by_category": {
+          "pragmatic_semantic": {
+            "n": 28,
+            "passed": 0,
+            "rate": 0.0,
+            "schema_valid": 0.8571428571428571,
+            "truncated": 0
+          },
+          "pragmatic_tool": {
+            "n": 28,
+            "passed": 13,
+            "rate": 0.4642857142857143,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "pragmatic_semantic": 0.0,
+          "pragmatic_tool": 0.4642857142857143
+        },
+        "features": {
+          "ct": null,
+          "language": 0.0,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": 0.0
+        },
+        "total": 56,
+        "seconds": 158.18706631660461
+      },
+      "joint": {
+        "by_category": {
+          "ct_joint": {
+            "n": 32,
+            "passed": 13,
+            "rate": 0.40625,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "ct_joint": 0.40625
+        },
+        "features": {
+          "ct": 0.40625,
+          "language": null,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 32,
+        "seconds": 260.86490201950073
+      },
+      "fresh_knowledge": {
+        "n": 670,
+        "passed": 336,
+        "accuracy": 0.5014925373134328,
+        "seconds": 58.76535081863403,
+        "label": "base-fresh-knowledge"
+      }
+    },
+    "selected": {
+      "frozen": {
+        "by_category": {
+          "custom_tables": {
+            "n": 40,
+            "passed": 24,
+            "rate": 0.6,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_generic": {
+            "n": 30,
+            "passed": 24,
+            "rate": 0.8,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_teamsync": {
+            "n": 114,
+            "passed": 109,
+            "rate": 0.956140350877193,
+            "schema_valid": 1.0,
+            "truncated": 1
+          },
+          "zhtw_comprehension": {
+            "n": 40,
+            "passed": 32,
+            "rate": 0.8,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "custom_tables": 0.6,
+          "legacy_generic": 0.8,
+          "legacy_teamsync": 0.9561403508771931,
+          "zhtw_comprehension": 0.8
+        },
+        "features": {
+          "ct": null,
+          "language": 0.8,
+          "schema": 1.0,
+          "no_unwanted_call": 0.82,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 224,
+        "seconds": 699.7957298755646
+      },
+      "pragmatics": {
+        "by_category": {
+          "pragmatic_semantic": {
+            "n": 28,
+            "passed": 9,
+            "rate": 0.32142857142857145,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "pragmatic_tool": {
+            "n": 28,
+            "passed": 16,
+            "rate": 0.5714285714285714,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "pragmatic_semantic": 0.32142857142857145,
+          "pragmatic_tool": 0.5714285714285714
+        },
+        "features": {
+          "ct": null,
+          "language": 0.32142857142857145,
+          "schema": 1.0,
+          "no_unwanted_call": 0.6666666666666666,
+          "unwanted_commits": 0,
+          "joint_pairs": 0.07142857142857142
+        },
+        "total": 56,
+        "seconds": 313.78055000305176
+      },
+      "joint": {
+        "by_category": {
+          "ct_joint": {
+            "n": 32,
+            "passed": 31,
+            "rate": 0.96875,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "ct_joint": 0.96875
+        },
+        "features": {
+          "ct": 0.96875,
+          "language": null,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 32,
+        "seconds": 153.75356554985046
+      },
+      "fresh_knowledge": {
+        "n": 670,
+        "passed": 319,
+        "accuracy": 0.4761194029850746,
+        "seconds": 82.1886510848999,
+        "label": "selected-fresh-knowledge"
+      }
+    }
+  },
+  "gates": {
+    "development_accepted": false,
+    "protected_groups_nonregressing": false,
+    "no_call_and_schema_nonregressing_zero_unwanted_commits": false,
+    "fresh_knowledge_nonregressing": false,
+    "joint_acceptance": false
+  },
+  "limitations": [
+    "Authored scenario tests share rules and have prior diagnostic use.",
+    "Fresh knowledge test is a sampled public benchmark; pretraining contamination is unknown.",
+    "No private LangSmith training examples, backend operation or deployment."
+  ]
+}
