@@ -1,0 +1,976 @@
+{
+  "base": {
+    "identity": {
+      "label": "base",
+      "base_model": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16",
+      "base_revision": "49843eed8db1f1c616c47af75cfd36e07aec0667",
+      "base_manifest_sha256": "353e931e17fb6e892a464936d01658760ecf54c088a5bca9f24ce9efcded48ec",
+      "base_all_files_sha256_verified": true,
+      "adapter_sha256": null,
+      "data_sha256": "c1097f67e9d0d7294f556a0b943b4ffb67cfba64f9b935e5c349d15b32c9512d",
+      "fixture_sha256": [
+        "c42540e1748d3dad3eb001db3cd415202f5e8c1b8e674b57a22a03513db92e09",
+        "a0a846384bc9516b054fcbedcdbef9f1a9da79ee77c41d21f64a913e34f12272",
+        "1a941c5385b69e657219c00af9abd315a904ce29d91404a6e11e4503c5dfe7b1"
+      ],
+      "seed": 20261102,
+      "versions": {
+        "torch": "2.7.1+cu118",
+        "transformers": "5.21.0",
+        "peft": "0.21.2",
+        "bitsandbytes": "0.50.2"
+      },
+      "protocol": "Full supplied TMMLU+ rows; zero-shot next-token likelihood restricted to A/B/C/D; no tools; no answer-dependent filtering; same native template; thinking disabled.",
+      "quantization": "NF4 double quantization, BF16 compute, checkpoint-BF16 frozen embeddings, FP32 norms",
+      "optimizer_updates": 0,
+      "runner_sha256": "0ce97cb1530cb47e0a99b58c00356cbadaf3504ac4f852d91e4d78f3ede1a1c6"
+    },
+    "tmmluplus": {
+      "n": 19680,
+      "passed": 10049,
+      "accuracy": 0.510619918699187,
+      "wilson_95": [
+        0.5036344737492314,
+        0.5176012185252908
+      ],
+      "subject_macro": 0.5152847119007468,
+      "by_subject": {
+        "accounting": {
+          "n": 187,
+          "passed": 55,
+          "accuracy": 0.29411764705882354
+        },
+        "administrative_law": {
+          "n": 411,
+          "passed": 153,
+          "accuracy": 0.3722627737226277
+        },
+        "advance_chemistry": {
+          "n": 122,
+          "passed": 52,
+          "accuracy": 0.4262295081967213
+        },
+        "agriculture": {
+          "n": 144,
+          "passed": 61,
+          "accuracy": 0.4236111111111111
+        },
+        "anti_money_laundering": {
+          "n": 131,
+          "passed": 91,
+          "accuracy": 0.6946564885496184
+        },
+        "auditing": {
+          "n": 538,
+          "passed": 235,
+          "accuracy": 0.4368029739776952
+        },
+        "basic_medical_science": {
+          "n": 944,
+          "passed": 571,
+          "accuracy": 0.6048728813559322
+        },
+        "business_management": {
+          "n": 136,
+          "passed": 93,
+          "accuracy": 0.6838235294117647
+        },
+        "chinese_language_and_literature": {
+          "n": 195,
+          "passed": 71,
+          "accuracy": 0.3641025641025641
+        },
+        "clinical_psychology": {
+          "n": 125,
+          "passed": 73,
+          "accuracy": 0.584
+        },
+        "computer_science": {
+          "n": 168,
+          "passed": 124,
+          "accuracy": 0.7380952380952381
+        },
+        "culinary_skills": {
+          "n": 284,
+          "passed": 188,
+          "accuracy": 0.6619718309859155
+        },
+        "dentistry": {
+          "n": 397,
+          "passed": 206,
+          "accuracy": 0.5188916876574308
+        },
+        "economics": {
+          "n": 390,
+          "passed": 186,
+          "accuracy": 0.47692307692307695
+        },
+        "education": {
+          "n": 119,
+          "passed": 73,
+          "accuracy": 0.6134453781512605
+        },
+        "education_(profession_level)": {
+          "n": 468,
+          "passed": 216,
+          "accuracy": 0.46153846153846156
+        },
+        "educational_psychology": {
+          "n": 171,
+          "passed": 114,
+          "accuracy": 0.6666666666666666
+        },
+        "engineering_math": {
+          "n": 86,
+          "passed": 31,
+          "accuracy": 0.36046511627906974
+        },
+        "finance_banking": {
+          "n": 134,
+          "passed": 65,
+          "accuracy": 0.48507462686567165
+        },
+        "financial_analysis": {
+          "n": 381,
+          "passed": 180,
+          "accuracy": 0.47244094488188976
+        },
+        "fire_science": {
+          "n": 121,
+          "passed": 47,
+          "accuracy": 0.3884297520661157
+        },
+        "general_principles_of_law": {
+          "n": 102,
+          "passed": 44,
+          "accuracy": 0.43137254901960786
+        },
+        "geography_of_taiwan": {
+          "n": 754,
+          "passed": 430,
+          "accuracy": 0.5702917771883289
+        },
+        "human_behavior": {
+          "n": 303,
+          "passed": 211,
+          "accuracy": 0.6963696369636964
+        },
+        "insurance_studies": {
+          "n": 734,
+          "passed": 318,
+          "accuracy": 0.4332425068119891
+        },
+        "introduction_to_law": {
+          "n": 234,
+          "passed": 107,
+          "accuracy": 0.45726495726495725
+        },
+        "jce_humanities": {
+          "n": 86,
+          "passed": 47,
+          "accuracy": 0.5465116279069767
+        },
+        "junior_chemistry": {
+          "n": 197,
+          "passed": 87,
+          "accuracy": 0.4416243654822335
+        },
+        "junior_chinese_exam": {
+          "n": 174,
+          "passed": 121,
+          "accuracy": 0.6954022988505747
+        },
+        "junior_math_exam": {
+          "n": 159,
+          "passed": 65,
+          "accuracy": 0.4088050314465409
+        },
+        "junior_science_exam": {
+          "n": 203,
+          "passed": 126,
+          "accuracy": 0.6206896551724138
+        },
+        "junior_social_studies": {
+          "n": 104,
+          "passed": 72,
+          "accuracy": 0.6923076923076923
+        },
+        "linear_algebra": {
+          "n": 34,
+          "passed": 12,
+          "accuracy": 0.35294117647058826
+        },
+        "logic_reasoning": {
+          "n": 130,
+          "passed": 59,
+          "accuracy": 0.45384615384615384
+        },
+        "macroeconomics": {
+          "n": 404,
+          "passed": 192,
+          "accuracy": 0.4752475247524752
+        },
+        "management_accounting": {
+          "n": 211,
+          "passed": 94,
+          "accuracy": 0.44549763033175355
+        },
+        "marketing_management": {
+          "n": 93,
+          "passed": 76,
+          "accuracy": 0.8172043010752689
+        },
+        "mechanical": {
+          "n": 116,
+          "passed": 77,
+          "accuracy": 0.6637931034482759
+        },
+        "music": {
+          "n": 272,
+          "passed": 128,
+          "accuracy": 0.47058823529411764
+        },
+        "national_protection": {
+          "n": 200,
+          "passed": 117,
+          "accuracy": 0.585
+        },
+        "nautical_science": {
+          "n": 543,
+          "passed": 216,
+          "accuracy": 0.39779005524861877
+        },
+        "occupational_therapy_for_psychological_disorders": {
+          "n": 542,
+          "passed": 352,
+          "accuracy": 0.6494464944649446
+        },
+        "official_document_management": {
+          "n": 204,
+          "passed": 86,
+          "accuracy": 0.4215686274509804
+        },
+        "optometry": {
+          "n": 915,
+          "passed": 354,
+          "accuracy": 0.38688524590163936
+        },
+        "organic_chemistry": {
+          "n": 103,
+          "passed": 66,
+          "accuracy": 0.6407766990291263
+        },
+        "pharmacology": {
+          "n": 572,
+          "passed": 292,
+          "accuracy": 0.5104895104895105
+        },
+        "pharmacy": {
+          "n": 379,
+          "passed": 137,
+          "accuracy": 0.36147757255936674
+        },
+        "physical_education": {
+          "n": 174,
+          "passed": 83,
+          "accuracy": 0.47701149425287354
+        },
+        "physics": {
+          "n": 91,
+          "passed": 45,
+          "accuracy": 0.4945054945054945
+        },
+        "politic_science": {
+          "n": 989,
+          "passed": 574,
+          "accuracy": 0.5803842264914054
+        },
+        "real_estate": {
+          "n": 85,
+          "passed": 42,
+          "accuracy": 0.49411764705882355
+        },
+        "secondary_physics": {
+          "n": 104,
+          "passed": 49,
+          "accuracy": 0.47115384615384615
+        },
+        "statistics_and_machine_learning": {
+          "n": 220,
+          "passed": 131,
+          "accuracy": 0.5954545454545455
+        },
+        "taiwanese_hokkien": {
+          "n": 128,
+          "passed": 42,
+          "accuracy": 0.328125
+        },
+        "taxation": {
+          "n": 365,
+          "passed": 126,
+          "accuracy": 0.3452054794520548
+        },
+        "technical": {
+          "n": 398,
+          "passed": 236,
+          "accuracy": 0.592964824120603
+        },
+        "three_principles_of_people": {
+          "n": 139,
+          "passed": 86,
+          "accuracy": 0.6187050359712231
+        },
+        "trade": {
+          "n": 455,
+          "passed": 166,
+          "accuracy": 0.3648351648351648
+        },
+        "traditional_chinese_medicine_clinical_medicine": {
+          "n": 277,
+          "passed": 113,
+          "accuracy": 0.40794223826714804
+        },
+        "trust_practice": {
+          "n": 394,
+          "passed": 168,
+          "accuracy": 0.4263959390862944
+        },
+        "ttqav2": {
+          "n": 112,
+          "passed": 82,
+          "accuracy": 0.7321428571428571
+        },
+        "tve_chinese_language": {
+          "n": 477,
+          "passed": 282,
+          "accuracy": 0.5911949685534591
+        },
+        "tve_design": {
+          "n": 472,
+          "passed": 314,
+          "accuracy": 0.6652542372881356
+        },
+        "tve_mathematics": {
+          "n": 148,
+          "passed": 49,
+          "accuracy": 0.3310810810810811
+        },
+        "tve_natural_sciences": {
+          "n": 411,
+          "passed": 248,
+          "accuracy": 0.6034063260340633
+        },
+        "veterinary_pathology": {
+          "n": 283,
+          "passed": 136,
+          "accuracy": 0.48056537102473496
+        },
+        "veterinary_pharmacology": {
+          "n": 538,
+          "passed": 306,
+          "accuracy": 0.5687732342007435
+        }
+      },
+      "over_context_counted_in_denominator": 0,
+      "seconds": 1160.0576751232147
+    },
+    "authored": {
+      "test_frozen": {
+        "by_category": {
+          "custom_tables": {
+            "n": 40,
+            "passed": 25,
+            "rate": 0.625,
+            "schema_valid": 1.0,
+            "truncated": 7
+          },
+          "legacy_generic": {
+            "n": 30,
+            "passed": 25,
+            "rate": 0.8333333333333334,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_teamsync": {
+            "n": 114,
+            "passed": 94,
+            "rate": 0.8245614035087719,
+            "schema_valid": 1.0,
+            "truncated": 3
+          },
+          "zhtw_comprehension": {
+            "n": 40,
+            "passed": 28,
+            "rate": 0.7,
+            "schema_valid": 0.975,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "custom_tables": 0.625,
+          "legacy_generic": 0.8333333333333334,
+          "legacy_teamsync": 0.8245614035087719,
+          "zhtw_comprehension": 0.7
+        },
+        "features": {
+          "ct": null,
+          "language": 0.7,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 224
+      },
+      "test_pragmatics": {
+        "by_category": {
+          "pragmatic_semantic": {
+            "n": 28,
+            "passed": 0,
+            "rate": 0.0,
+            "schema_valid": 0.8571428571428571,
+            "truncated": 0
+          },
+          "pragmatic_tool": {
+            "n": 28,
+            "passed": 13,
+            "rate": 0.4642857142857143,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "pragmatic_semantic": 0.0,
+          "pragmatic_tool": 0.4642857142857143
+        },
+        "features": {
+          "ct": null,
+          "language": 0.0,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": 0.0
+        },
+        "total": 56
+      },
+      "test_joint": {
+        "by_category": {
+          "ct_joint": {
+            "n": 32,
+            "passed": 13,
+            "rate": 0.40625,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "ct_joint": 0.40625
+        },
+        "features": {
+          "ct": 0.40625,
+          "language": null,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 32
+      }
+    },
+    "completed_at": "2026-11-02T05:36:51.795408+00:00"
+  },
+  "formosync": {
+    "identity": {
+      "label": "formosync",
+      "base_model": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16",
+      "base_revision": "49843eed8db1f1c616c47af75cfd36e07aec0667",
+      "base_manifest_sha256": "353e931e17fb6e892a464936d01658760ecf54c088a5bca9f24ce9efcded48ec",
+      "base_all_files_sha256_verified": true,
+      "adapter_sha256": "fecf928856466c605aed86cc55d23e9fdb8da7f8c7fb06a381c140c2da53bd05",
+      "data_sha256": "c1097f67e9d0d7294f556a0b943b4ffb67cfba64f9b935e5c349d15b32c9512d",
+      "fixture_sha256": [
+        "c42540e1748d3dad3eb001db3cd415202f5e8c1b8e674b57a22a03513db92e09",
+        "a0a846384bc9516b054fcbedcdbef9f1a9da79ee77c41d21f64a913e34f12272",
+        "1a941c5385b69e657219c00af9abd315a904ce29d91404a6e11e4503c5dfe7b1"
+      ],
+      "seed": 20261102,
+      "versions": {
+        "torch": "2.7.1+cu118",
+        "transformers": "5.21.0",
+        "peft": "0.21.2",
+        "bitsandbytes": "0.50.2"
+      },
+      "protocol": "Full supplied TMMLU+ rows; zero-shot next-token likelihood restricted to A/B/C/D; no tools; no answer-dependent filtering; same native template; thinking disabled.",
+      "quantization": "NF4 double quantization, BF16 compute, checkpoint-BF16 frozen embeddings, FP32 norms",
+      "optimizer_updates": 0,
+      "runner_sha256": "0ce97cb1530cb47e0a99b58c00356cbadaf3504ac4f852d91e4d78f3ede1a1c6"
+    },
+    "tmmluplus": {
+      "n": 19680,
+      "passed": 9743,
+      "accuracy": 0.4950711382113821,
+      "wilson_95": [
+        0.4880874916198889,
+        0.5020567086163376
+      ],
+      "subject_macro": 0.4999301449925723,
+      "by_subject": {
+        "accounting": {
+          "n": 187,
+          "passed": 62,
+          "accuracy": 0.3315508021390374
+        },
+        "administrative_law": {
+          "n": 411,
+          "passed": 147,
+          "accuracy": 0.35766423357664234
+        },
+        "advance_chemistry": {
+          "n": 122,
+          "passed": 51,
+          "accuracy": 0.4180327868852459
+        },
+        "agriculture": {
+          "n": 144,
+          "passed": 64,
+          "accuracy": 0.4444444444444444
+        },
+        "anti_money_laundering": {
+          "n": 131,
+          "passed": 85,
+          "accuracy": 0.648854961832061
+        },
+        "auditing": {
+          "n": 538,
+          "passed": 228,
+          "accuracy": 0.42379182156133827
+        },
+        "basic_medical_science": {
+          "n": 944,
+          "passed": 558,
+          "accuracy": 0.5911016949152542
+        },
+        "business_management": {
+          "n": 136,
+          "passed": 91,
+          "accuracy": 0.6691176470588235
+        },
+        "chinese_language_and_literature": {
+          "n": 195,
+          "passed": 67,
+          "accuracy": 0.3435897435897436
+        },
+        "clinical_psychology": {
+          "n": 125,
+          "passed": 67,
+          "accuracy": 0.536
+        },
+        "computer_science": {
+          "n": 168,
+          "passed": 126,
+          "accuracy": 0.75
+        },
+        "culinary_skills": {
+          "n": 284,
+          "passed": 183,
+          "accuracy": 0.6443661971830986
+        },
+        "dentistry": {
+          "n": 397,
+          "passed": 194,
+          "accuracy": 0.48866498740554154
+        },
+        "economics": {
+          "n": 390,
+          "passed": 187,
+          "accuracy": 0.4794871794871795
+        },
+        "education": {
+          "n": 119,
+          "passed": 69,
+          "accuracy": 0.5798319327731093
+        },
+        "education_(profession_level)": {
+          "n": 468,
+          "passed": 214,
+          "accuracy": 0.45726495726495725
+        },
+        "educational_psychology": {
+          "n": 171,
+          "passed": 108,
+          "accuracy": 0.631578947368421
+        },
+        "engineering_math": {
+          "n": 86,
+          "passed": 32,
+          "accuracy": 0.37209302325581395
+        },
+        "finance_banking": {
+          "n": 134,
+          "passed": 64,
+          "accuracy": 0.47761194029850745
+        },
+        "financial_analysis": {
+          "n": 381,
+          "passed": 176,
+          "accuracy": 0.46194225721784776
+        },
+        "fire_science": {
+          "n": 121,
+          "passed": 48,
+          "accuracy": 0.39669421487603307
+        },
+        "general_principles_of_law": {
+          "n": 102,
+          "passed": 42,
+          "accuracy": 0.4117647058823529
+        },
+        "geography_of_taiwan": {
+          "n": 754,
+          "passed": 416,
+          "accuracy": 0.5517241379310345
+        },
+        "human_behavior": {
+          "n": 303,
+          "passed": 203,
+          "accuracy": 0.66996699669967
+        },
+        "insurance_studies": {
+          "n": 734,
+          "passed": 303,
+          "accuracy": 0.4128065395095368
+        },
+        "introduction_to_law": {
+          "n": 234,
+          "passed": 105,
+          "accuracy": 0.44871794871794873
+        },
+        "jce_humanities": {
+          "n": 86,
+          "passed": 39,
+          "accuracy": 0.45348837209302323
+        },
+        "junior_chemistry": {
+          "n": 197,
+          "passed": 89,
+          "accuracy": 0.4517766497461929
+        },
+        "junior_chinese_exam": {
+          "n": 174,
+          "passed": 113,
+          "accuracy": 0.6494252873563219
+        },
+        "junior_math_exam": {
+          "n": 159,
+          "passed": 65,
+          "accuracy": 0.4088050314465409
+        },
+        "junior_science_exam": {
+          "n": 203,
+          "passed": 122,
+          "accuracy": 0.6009852216748769
+        },
+        "junior_social_studies": {
+          "n": 104,
+          "passed": 75,
+          "accuracy": 0.7211538461538461
+        },
+        "linear_algebra": {
+          "n": 34,
+          "passed": 12,
+          "accuracy": 0.35294117647058826
+        },
+        "logic_reasoning": {
+          "n": 130,
+          "passed": 47,
+          "accuracy": 0.36153846153846153
+        },
+        "macroeconomics": {
+          "n": 404,
+          "passed": 181,
+          "accuracy": 0.44801980198019803
+        },
+        "management_accounting": {
+          "n": 211,
+          "passed": 89,
+          "accuracy": 0.4218009478672986
+        },
+        "marketing_management": {
+          "n": 93,
+          "passed": 75,
+          "accuracy": 0.8064516129032258
+        },
+        "mechanical": {
+          "n": 116,
+          "passed": 74,
+          "accuracy": 0.6379310344827587
+        },
+        "music": {
+          "n": 272,
+          "passed": 113,
+          "accuracy": 0.41544117647058826
+        },
+        "national_protection": {
+          "n": 200,
+          "passed": 114,
+          "accuracy": 0.57
+        },
+        "nautical_science": {
+          "n": 543,
+          "passed": 202,
+          "accuracy": 0.3720073664825046
+        },
+        "occupational_therapy_for_psychological_disorders": {
+          "n": 542,
+          "passed": 342,
+          "accuracy": 0.6309963099630996
+        },
+        "official_document_management": {
+          "n": 204,
+          "passed": 84,
+          "accuracy": 0.4117647058823529
+        },
+        "optometry": {
+          "n": 915,
+          "passed": 349,
+          "accuracy": 0.3814207650273224
+        },
+        "organic_chemistry": {
+          "n": 103,
+          "passed": 67,
+          "accuracy": 0.6504854368932039
+        },
+        "pharmacology": {
+          "n": 572,
+          "passed": 282,
+          "accuracy": 0.493006993006993
+        },
+        "pharmacy": {
+          "n": 379,
+          "passed": 133,
+          "accuracy": 0.35092348284960423
+        },
+        "physical_education": {
+          "n": 174,
+          "passed": 84,
+          "accuracy": 0.4827586206896552
+        },
+        "physics": {
+          "n": 91,
+          "passed": 48,
+          "accuracy": 0.5274725274725275
+        },
+        "politic_science": {
+          "n": 989,
+          "passed": 554,
+          "accuracy": 0.5601617795753286
+        },
+        "real_estate": {
+          "n": 85,
+          "passed": 41,
+          "accuracy": 0.4823529411764706
+        },
+        "secondary_physics": {
+          "n": 104,
+          "passed": 48,
+          "accuracy": 0.46153846153846156
+        },
+        "statistics_and_machine_learning": {
+          "n": 220,
+          "passed": 131,
+          "accuracy": 0.5954545454545455
+        },
+        "taiwanese_hokkien": {
+          "n": 128,
+          "passed": 35,
+          "accuracy": 0.2734375
+        },
+        "taxation": {
+          "n": 365,
+          "passed": 114,
+          "accuracy": 0.31232876712328766
+        },
+        "technical": {
+          "n": 398,
+          "passed": 226,
+          "accuracy": 0.5678391959798995
+        },
+        "three_principles_of_people": {
+          "n": 139,
+          "passed": 85,
+          "accuracy": 0.6115107913669064
+        },
+        "trade": {
+          "n": 455,
+          "passed": 163,
+          "accuracy": 0.35824175824175825
+        },
+        "traditional_chinese_medicine_clinical_medicine": {
+          "n": 277,
+          "passed": 112,
+          "accuracy": 0.4043321299638989
+        },
+        "trust_practice": {
+          "n": 394,
+          "passed": 176,
+          "accuracy": 0.4467005076142132
+        },
+        "ttqav2": {
+          "n": 112,
+          "passed": 78,
+          "accuracy": 0.6964285714285714
+        },
+        "tve_chinese_language": {
+          "n": 477,
+          "passed": 273,
+          "accuracy": 0.5723270440251572
+        },
+        "tve_design": {
+          "n": 472,
+          "passed": 299,
+          "accuracy": 0.6334745762711864
+        },
+        "tve_mathematics": {
+          "n": 148,
+          "passed": 48,
+          "accuracy": 0.32432432432432434
+        },
+        "tve_natural_sciences": {
+          "n": 411,
+          "passed": 245,
+          "accuracy": 0.5961070559610706
+        },
+        "veterinary_pathology": {
+          "n": 283,
+          "passed": 124,
+          "accuracy": 0.4381625441696113
+        },
+        "veterinary_pharmacology": {
+          "n": 538,
+          "passed": 302,
+          "accuracy": 0.5613382899628253
+        }
+      },
+      "over_context_counted_in_denominator": 0,
+      "seconds": 1595.579971075058
+    },
+    "authored": {
+      "test_frozen": {
+        "by_category": {
+          "custom_tables": {
+            "n": 40,
+            "passed": 24,
+            "rate": 0.6,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_generic": {
+            "n": 30,
+            "passed": 24,
+            "rate": 0.8,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "legacy_teamsync": {
+            "n": 114,
+            "passed": 109,
+            "rate": 0.956140350877193,
+            "schema_valid": 1.0,
+            "truncated": 1
+          },
+          "zhtw_comprehension": {
+            "n": 40,
+            "passed": 32,
+            "rate": 0.8,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "custom_tables": 0.6,
+          "legacy_generic": 0.8,
+          "legacy_teamsync": 0.9561403508771931,
+          "zhtw_comprehension": 0.8
+        },
+        "features": {
+          "ct": null,
+          "language": 0.8,
+          "schema": 1.0,
+          "no_unwanted_call": 0.82,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 224
+      },
+      "test_pragmatics": {
+        "by_category": {
+          "pragmatic_semantic": {
+            "n": 28,
+            "passed": 9,
+            "rate": 0.32142857142857145,
+            "schema_valid": 1.0,
+            "truncated": 0
+          },
+          "pragmatic_tool": {
+            "n": 28,
+            "passed": 16,
+            "rate": 0.5714285714285714,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "pragmatic_semantic": 0.32142857142857145,
+          "pragmatic_tool": 0.5714285714285714
+        },
+        "features": {
+          "ct": null,
+          "language": 0.32142857142857145,
+          "schema": 1.0,
+          "no_unwanted_call": 0.6666666666666666,
+          "unwanted_commits": 0,
+          "joint_pairs": 0.07142857142857142
+        },
+        "total": 56
+      },
+      "test_joint": {
+        "by_category": {
+          "ct_joint": {
+            "n": 32,
+            "passed": 31,
+            "rate": 0.96875,
+            "schema_valid": 1.0,
+            "truncated": 0
+          }
+        },
+        "family_macro": {
+          "ct_joint": 0.96875
+        },
+        "features": {
+          "ct": 0.96875,
+          "language": null,
+          "schema": 1.0,
+          "no_unwanted_call": 1.0,
+          "unwanted_commits": 0,
+          "joint_pairs": null
+        },
+        "total": 32
+      }
+    },
+    "completed_at": "2026-11-02T06:19:56.649273+00:00"
+  },
+  "tmmlu_accuracy_delta": -0.015548780487804892,
+  "paired": {
+    "both_correct": 8943,
+    "base_only": 1106,
+    "formosync_only": 800,
+    "both_wrong": 8831
+  },
+  "protocol_matches": true,
+  "model_acceptance_implied": false,
+  "limits": [
+    "Zero-shot likelihood adaptation, not the official few-shot leaderboard protocol.",
+    "Base pretraining contamination is unknown.",
+    "Authored tests share training scenario rules and have prior diagnostic use."
+  ]
+}

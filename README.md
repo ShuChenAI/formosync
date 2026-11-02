@@ -42,9 +42,34 @@ fecf928856466c605aed86cc55d23e9fdb8da7f8c7fb06a381c140c2da53bd05
 
 The saved adapter was reloaded against a fresh base and its adapter tensors were verified equal to the saved state. `E4B` follows the upstream family name; it should not be read as a statement of total stored parameter count or VRAM requirements.
 
-## Results against the base
+## Fresh full-test comparison — 2026-11-02
 
-These are the archived R6 measurements. The separately requested full TMMLU+ rerun is tracked in [the new benchmark protocol](docs/benchmark-20261102.md); no fresh score is implied by this table.
+Both fixed-artifact runs completed with matching input IDs, runtime versions and protocol. This is zero-shot option-letter likelihood, not the official few-shot leaderboard protocol.
+
+| Metric | NVIDIA base | FormoSync E4B |
+|---|---:|---:|
+| TMMLU+ / full test | 10049/19680 (51.06%) | 9743/19680 (49.51%) |
+| TMMLU+ / 67-subject macro | 51.53% | 49.99% |
+| Frozen Custom Tables | 25/40 (62.50%) | 24/40 (60.00%) |
+| Frozen TeamSync | 94/114 (82.46%) | 109/114 (95.61%) |
+| Frozen generic tools | 25/30 (83.33%) | 24/30 (80.00%) |
+| Frozen zh-TW comprehension | 28/40 (70.00%) | 32/40 (80.00%) |
+| Pragmatic semantics | 0/28 (0.00%) | 9/28 (32.14%) |
+| Pragmatic tool use | 13/28 (46.43%) | 16/28 (57.14%) |
+| Joint Custom Tables | 13/32 (40.62%) | 31/32 (96.88%) |
+| Frozen no-unwanted-call | 100.00% | 82.00% |
+| Pragmatic no-unwanted-call | 100.00% | 66.67% |
+| Joint CT no-unwanted-call | 100.00% | 100.00% |
+
+Paired TMMLU+ outcomes: both_correct=8943, base_only=1106, formosync_only=800, both_wrong=8831.
+
+[Results and verification release](https://github.com/ShuChenAI/formosync/releases/tag/benchmark-20261102) · [Machine-readable comparison](docs/benchmark-20261102-results.json). Authored tests share training scenario rules and prior diagnostic use; broad language or production safety acceptance is not established.
+
+Full TMMLU+ accuracy decreases by **1.55 percentage points** (306 fewer correct answers). Several authored tool and language metrics improve, while other tool and no-call metrics regress; these results do not establish across-the-board superiority.
+
+## Archived R6 results
+
+The table below preserves the original archived R6 measurements, separately from the new full-test comparison above.
 
 The following are saved-artifact results, not training loss or development scores.
 

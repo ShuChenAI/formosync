@@ -29,6 +29,23 @@ Run the two model processes sequentially on the same GPU. The commands require t
 
 The optional `--fixtures` argument accepts a locally available authored test file. Frozen fixture labels are not included in the public training-data asset. The public source includes the recorded scoring code, but exact reproduction of those private authored suites requires those fixture files.
 
-## Execution status
+## Completed results
 
-The new run has been requested and prepared. New measurements will be added only after both fixed-artifact runs finish and the comparison verifies identical protocol and question IDs. No new numerical result is claimed by this document.
+Both models completed the full test split and all 312 authored cases. The comparison verified matching protocols, question IDs, versions and precision. Stored MCQ predictions were independently re-counted before publication. GPU stop and quota release were confirmed.
+
+| Metric | NVIDIA base | FormoSync E4B |
+|---|---:|---:|
+| TMMLU+ / full test | 10049/19680 (51.06%) | 9743/19680 (49.51%) |
+| TMMLU+ / 67-subject macro | 51.53% | 49.99% |
+| Frozen Custom Tables | 25/40 (62.50%) | 24/40 (60.00%) |
+| Frozen TeamSync | 94/114 (82.46%) | 109/114 (95.61%) |
+| Frozen generic tools | 25/30 (83.33%) | 24/30 (80.00%) |
+| Frozen zh-TW comprehension | 28/40 (70.00%) | 32/40 (80.00%) |
+| Pragmatic semantics | 0/28 (0.00%) | 9/28 (32.14%) |
+| Pragmatic tool use | 13/28 (46.43%) | 16/28 (57.14%) |
+| Joint Custom Tables | 13/32 (40.62%) | 31/32 (96.88%) |
+| Frozen no-unwanted-call | 100.00% | 82.00% |
+| Pragmatic no-unwanted-call | 100.00% | 66.67% |
+| Joint CT no-unwanted-call | 100.00% | 100.00% |
+
+[Structured results](benchmark-20261102-results.json) · [Release and checksums](https://github.com/ShuChenAI/formosync/releases/tag/benchmark-20261102).
